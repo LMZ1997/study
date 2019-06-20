@@ -38,7 +38,7 @@ html {
   }
 }
 
-#解决html5 audio标签在苹果ios不能自动播放的问题
+# 解决html5 audio标签在苹果ios不能自动播放的问题
 function audioAutoPlay(id){
         var audio = document.getElementById(id),
             play = function(){
@@ -56,7 +56,7 @@ function audioAutoPlay(id){
     }
     audioAutoPlay('BGSound');
     
-#解决ElementUi里的轮播图默认高度300px的影响
+# 解决ElementUi里的轮播图默认高度300px的影响
 setSize: function() {
         var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         this.screenWidth = width;
