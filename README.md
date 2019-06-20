@@ -57,7 +57,7 @@ function audioAutoPlay(id){
     audioAutoPlay('BGSound');
     
 # 解决ElementUi里的轮播图默认高度300px的影响
-setSize: function() {
+方法一：setSize: function() {//不全面
         var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         this.screenWidth = width;
         //图片                高 / 宽  700 / 1920
@@ -65,3 +65,6 @@ setSize: function() {
         document.getElementById('el-carousel').style.height = this.bannerHeight + 'px';
 
       }
+方法二：.el-carousel{
+        height: 11.75rem!important;
+    }
