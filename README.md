@@ -54,3 +54,12 @@ function audioAutoPlay(id){
         document.addEventListener("touchstart",play, false);
     }
     audioAutoPlay('BGSound');
+#解决ElementUi里的轮播图默认高度300px的影响
+setSize: function() {
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        this.screenWidth = width;
+        //图片                高 / 宽  700 / 1920
+        this.bannerHeight = 360 / 720 * this.screenWidth
+        document.getElementById('el-carousel').style.height = this.bannerHeight + 'px';
+
+      }
