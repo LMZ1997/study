@@ -37,6 +37,7 @@ html {
     font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
   }
 }
+
 #解决html5 audio标签在苹果ios不能自动播放的问题
 function audioAutoPlay(id){
         var audio = document.getElementById(id),
@@ -54,6 +55,7 @@ function audioAutoPlay(id){
         document.addEventListener("touchstart",play, false);
     }
     audioAutoPlay('BGSound');
+    
 #解决ElementUi里的轮播图默认高度300px的影响
 setSize: function() {
         var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
