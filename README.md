@@ -68,3 +68,4 @@ function audioAutoPlay(id){
 方法二：.el-carousel{
         height: 11.75rem!important;
     }
+# async函数的使用方式，直接在普通函数前面加上async，表示这是一个异步函数，在要异步执行的语句前面加上await，表示后面的表达式需要等待
