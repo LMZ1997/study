@@ -69,3 +69,5 @@ function audioAutoPlay(id){
         height: 11.75rem!important;
     }
 # async函数的使用方式，直接在普通函数前面加上async，表示这是一个异步函数，在要异步执行的语句前面加上await，表示后面的表达式需要等待
+# github拉取git仓库下的某个文件夹
+    如： https://github.com/LMZ1997/stu/tree/master/weChat    将 tree/master 更改为 trunk ,然后用svn下载
