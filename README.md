@@ -80,6 +80,8 @@ function audioAutoPlay(id){
       }
 # 多行文本溢出显示省略号
  display: -webkit-box;
--webkit-box-orient: vertical;
+ /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+/*! autoprefixer: on */
 -webkit-line-clamp: 3;
 overflow: hidden;
