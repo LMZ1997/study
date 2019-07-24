@@ -86,4 +86,5 @@ function audioAutoPlay(id){
 -webkit-line-clamp: 3;
 overflow: hidden;
 # 微信h5页面兼容性之
-h5页面点击inout框弹出输入框后，将输入框关闭，会导致当前页面显示之前100%高度减去输入框高度的bug，解决：添加input的blur事件,执行document.body.scrollTop=0操作
+h5页面点击inout框弹出输入法框后，将输入法框关闭，会导致当前页面显示之前100%高度减去输入框高度的bug，解决：添加input的blur事件,执行document.body.scrollTop=0操作
+# h5页面input框的输入法回车事件，可能越过当前input的限制问题，比如设置input必填；解决办法：检测input keydown事件，如果输入回车，则return false
