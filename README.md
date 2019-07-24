@@ -85,3 +85,5 @@ function audioAutoPlay(id){
 /*! autoprefixer: on */
 -webkit-line-clamp: 3;
 overflow: hidden;
+# 微信h5页面兼容性之
+h5页面点击inout框弹出输入框后，将输入框关闭，会导致当前页面显示之前100%高度减去输入框高度的bug，解决：添加input的blur事件,执行document.body.scrollTop=0操作
