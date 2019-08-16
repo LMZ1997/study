@@ -93,3 +93,6 @@ h5页面点击inout框弹出输入法框后，将输入法框关闭，会导致�
 function isObject(x) {
     return Object.prototype.toString.call(x) === '[object Object]';
 }
+# ES6方法set实现数组去重
+const fn = arr => [...new Set(arr)];
+fn([1,2,3,2,3,5])  // 1,2,3,5
