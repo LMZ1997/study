@@ -97,3 +97,11 @@
 	const fn = arr => [...new Set(arr)];
 
 	fn([1,2,3,2,3,5])  // 1,2,3,5
+# 强制项目只能在微信浏览器里打开
+	  var useragent = navigator.userAgent;
+	    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+		// 这里警告框会阻塞当前页面继续加载
+		alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+		// 以下代码是用javascript强行关闭当前页面
+		window.location.href = "http://www.eol.cn";
+	    }
