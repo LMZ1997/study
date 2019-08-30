@@ -105,3 +105,17 @@
 		// 以下代码是用javascript强行关闭当前页面
 		window.location.href = "http://www.eol.cn";
 	    }
+# h5兼容性之input框回车限制
+    $(".z_input").keydown(function(e) {
+      //避免输入框回车问题
+      if (e.keyCode == 13 && $(this).text() == "") {
+        return false;
+        alert("请完善相关信息");
+      }
+    });
+# h5兼容性之键盘抬起影响布局（多发于安卓）
+	 window.onload = function() {
+	      //安卓机键盘抬起会使背景图上移问题
+	      document.getElementsByTagName("body")[0].style.height =
+		window.innerHeight + "px";
+	    };
