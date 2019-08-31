@@ -119,3 +119,4 @@
 	      document.getElementsByTagName("body")[0].style.height =
 		window.innerHeight + "px";
 	    };
+# input框设置为number类型，不容易对其进行字符限制，设置类型为text + 正则限制数字输入
