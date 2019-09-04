@@ -120,3 +120,4 @@
 		window.innerHeight + "px";
 	    };
 # input框设置为number类型，不容易对其进行字符限制，设置类型为text + 正则限制数字输入
+# input 原生验证条件required,在每一项都通过验证时，会触发form标签上绑定的submit函数
