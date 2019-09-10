@@ -122,3 +122,12 @@
 # input框设置为number类型，不容易对其进行字符限制，设置类型为text + 正则限制数字输入
 # input 原生验证条件required,在每一项都通过验证时，会触发form标签上绑定的submit函数
 # 当页面的地址包含‘#’时，widnow.location.search的返回值为空，因为search只取“？”后面和“#”之前的内容，如果“#”之前没有“？”search取值为空。
+# "button type=\"reset\"></button>==="<button type="+'reset'+"></button>"
+# 点击按钮下载文件不能用点击事件触发ajax请求接口
+# 点击按钮复制Dom内的内容
+	copyUrl = id => {
+	    var e = document.getElementById(id);
+	    e.select(); // 选择对象
+	    document.execCommand("Copy"); // 执行浏览器复制命令
+	    message.success("复制成功");
+	  };
