@@ -131,3 +131,4 @@
 	    document.execCommand("Copy"); // 执行浏览器复制命令
 	    message.success("复制成功");
 	  };
+# echarts在react中使用需要import相关组件 如图例 import "echarts/lib/component/legend"; 如果没有引入，初次进入页面可能显示没问题，但是点击刷新后，图表显示会有问题 
