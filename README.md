@@ -135,4 +135,13 @@
 # 如果父元素的font-size也是采用em表示,那么子元素的font-size怎么计算；
 	如果父元素设置为2rem;真是font-size为32px;
 	子元素也设置为2rem;那么子元素的font-size为64px;
+# 下面通过代码阐述instanceof的内部机制,假设现在有 x instanceof y 一条语句
+	while(x.__proto__!==null) {
+	    if(x.__proto__===y.prototype) {
+		return true;
+	    }
+	    x.__proto__ = x.__proto__.proto__;
+	}
+	if(x.__proto__==null) {return false;}
 	
+	x会一直沿着隐式原型链__proto__向上查找直到x.__proto__.__proto__......===y.prototype为止，如果找到则返回true，也就是x为y的一个实例。否则返回false，x不是y的实例。
