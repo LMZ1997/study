@@ -132,3 +132,7 @@
 	    message.success("复制成功");
 	  };
 # echarts在react中使用需要import相关组件 如图例 import "echarts/lib/component/legend"; 如果没有引入，初次进入页面可能显示没问题，但是点击刷新后，图表显示会有问题 
+# 如果父元素的font-size也是采用em表示,那么子元素的font-size怎么计算；
+	如果父元素设置为2rem;真是font-size为32px;
+	子元素也设置为2rem;那么子元素的font-size为64px;
+	
