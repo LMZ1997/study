@@ -176,3 +176,6 @@
     console.log( a+++3 ); //4      分为2部分运算，第一个首先a要先加上3，即1+3得出4，然后a++;即a此时==2；
     console.log( a+++1 );//3       分为2部分运算，第一个首先a要先加上1，即2+1得出3，然后a++;即a此时==3；
     console.log( a+++8 );//11      分为2部分运算，第一个首先a要先加上8，即3+8得出11，然后a++;即a此时==4；
+# 判断值的类型
+	typeof可以用来判断除null以外的其他原始类型的数据，typeof null == object;
+	instanceof 用来判断除function以外的其他复杂类型的数据， typeof 函数fn == function。
