@@ -167,3 +167,7 @@
 	
 	var d = (a = 3, b = 4)
     	console.log(d)  //4
+#  
+	var x = !!"Hello" + (!"world", !!"from here!!");    console.log(x)   //2
+   	var x2 = 1 + (0,1);                                 console.log(x2)  //2
+   	var x3= true + (false,true);                        console.log(x3)  //2
