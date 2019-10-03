@@ -157,3 +157,7 @@
 	尽可能多的利用硬件能力，如使用3D变形来开启GPU加速：
 	尽可能少的使用box-shadows与gradients
 	在CSS动画中使用webkit-transform: translateX(3em)的方案代替使用left: 3em，因为left会额外触发layout与pain
+#  CSS Hack (用一些奇怪的手段达到兼容的方式！）
+	<!–-[if IE 7]>
+		<link rel="stylesheet" href="ie7.css" type="text/css" />
+	<![endif]–->
