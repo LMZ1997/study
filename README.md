@@ -161,13 +161,13 @@
 	<!–-[if IE 7]>
 		<link rel="stylesheet" href="ie7.css" type="text/css" />
 	<![endif]–->
-# 
+# （值1，值2）等于啥
 	var d = a = 3, b = 4
    	console.log(d)  //3
 	
 	var d = (a = 3, b = 4)
     	console.log(d)  //4
-#  
+#  !!隐式转换
 	var x = !!"Hello" + (!"world", !!"from here!!");    console.log(x)   //2
    	var x2 = 1 + (0,1);                                 console.log(x2)  //2
    	var x3= true + (false,true);                        console.log(x3)  //2
