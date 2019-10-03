@@ -161,3 +161,9 @@
 	<!–-[if IE 7]>
 		<link rel="stylesheet" href="ie7.css" type="text/css" />
 	<![endif]–->
+# 
+	var d = a = 3, b = 4
+   	console.log(d)  //3
+	
+	var d = (a = 3, b = 4)
+    	console.log(d)  //4
