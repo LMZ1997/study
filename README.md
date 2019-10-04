@@ -180,3 +180,15 @@
 	typeof可以用来判断除null以外的其他原始类型的数据，typeof null == object;
 	instanceof 用来判断除function以外的其他复杂类型的数据， typeof 函数fn == function。
 # 函数传参中，参数为原始类型的，函数内不管如何改变参数的值，对函数外部的真实值不产生影响.若参数为复杂类型即对象时，函数内若更改参数，那么函数外部的值也将由影响
+# js的常用内置对象？（new + 对象）
+	Arguments 函数参数集合
+	Array 数组
+	Boolean 布尔对象
+	Date 日期时间
+	Error 异常对象
+	Function 函数构造器
+	Math 数学对象
+	Number 数值对象
+	Object 基础对象
+	RegExp 正则表达式对象
+	String 字符串对象
