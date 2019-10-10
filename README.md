@@ -222,3 +222,36 @@
 	DOM2支持同一dom元素注册多个同种事件，事件发生的顺序按照添加的顺序依次触发（IE是相反的）。
 	DOM2事件通过addEventListener和removeEventListener管理
 	oDom.addEventListener(eventName,handlers,boolean）中，boolean为true时，则节点事件在捕获时执行，反之则在冒泡时执行。
+# 手写ajax的get与post函数
+	 function goAjax(url,method,param,callBack){
+		 var xmlHttp=null;
+		 if(window.xmlHttpRequest)
+		 {
+		   xmlHttp=new XmlHttpRequest(); 
+		 }else{
+		  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+		 if(method=="get"||method=="GET")
+		 {
+		  if(param.length>0)
+		  {
+		   url=url+"?"+param;
+		  }
+		  xmlHttp.open("get",url,true);
+		  xmlHttp.setRequestHeader("If-Modified-Since","0");//不缓存
+		  xmlHttp.send(null);
+		 }else{
+		  xmlHttp.open("post",url,true);
+		  xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		  xmlHttp.setRequestHeader("If-Modified-Since","0");//不缓存
+		  xmlHttp.send(param);
+		 }
+		 xmlHttp.onreadystatechange=function(){
+		  if(xmlHttp.status==200&&xmlHttp.readyState==4)
+		  {
+		   callBack(xmlHttp. reponseText);
+		  }else{
+		   alert(xmlHttp.statusText);
+		  }
+		 }
+	}
