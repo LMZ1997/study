@@ -218,3 +218,7 @@
 	eval("var age=10");//声明一个age变量
 	
 	eval的作用域取决于调用它的this的作用域
+# DOM2级事件处理程序
+	DOM2支持同一dom元素注册多个同种事件，事件发生的顺序按照添加的顺序依次触发（IE是相反的）。
+	DOM2事件通过addEventListener和removeEventListener管理
+	oDom.addEventListener(eventName,handlers,boolean）中，boolean为true时，则节点事件在捕获时执行，反之则在冒泡时执行。
