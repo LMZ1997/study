@@ -47,31 +47,7 @@
 		    };
 		audio.play();
 		document.addEventListener("WeixinJSBridgeReady", function () {
-		    play();
-		}, false);
-		document.addEventListener('YixinJSBridgeReady', function() {
-		    play();
-		}, false);
-		document.addEventListener("touchstart",play, false);
-	    }
-    audioAutoPlay('BGSound');
-    
-# 解决ElementUi里的轮播图默认高度300px的影响
-	方法一（不全面）：setSize: function() {
-		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-		this.screenWidth = width;
-		//图片                高 / 宽  700 / 1920
-		this.bannerHeight = 360 / 720 * this.screenWidth
-		document.getElementById('el-carousel').style.height = this.bannerHeight + 'px';
-
-	      }
-	方法二：.el-carousel{
-		height: 11.75rem!important;
-	    }
-# async函数的使用方式，直接在普通函数前面加上async，表示这是一个异步函数，在要异步执行的语句前面加上await，表示后面的表达式需要等待
-# github拉取git仓库下的某个文件夹
-    如： https://github.com/LMZ1997/stu/tree/master/weChat    将 tree/master 更改为 trunk ,然后用svn下载
-# 解决移动端a标签点击高亮
+  解决移动端a标签点击高亮
 	  a {
 		width: 100px;
 		height: 100px;
@@ -257,3 +233,6 @@
 	}
 # JSONP的基本原理
 	动态添加一个<script>标签，而script标签的src属性是没有跨域的限制的。
+# session的原理
+	session是依赖Cookie实现的。session是服务器端对象
+	当用户第一次使用session时（表示第一次请求服务器），服务器会创建session，并创建一个Cookie，在Cookie中保存了session的id，发送给客户端。这样客户端就有了自己session的id了。但这个Cookie只在浏览器内存中存在，也就是说，在关闭浏览器窗口后，Cookie就会丢失，也就丢失了sessionId
