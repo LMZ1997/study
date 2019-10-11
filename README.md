@@ -236,3 +236,14 @@
 # session的原理
 	session是依赖Cookie实现的。session是服务器端对象
 	当用户第一次使用session时（表示第一次请求服务器），服务器会创建session，并创建一个Cookie，在Cookie中保存了session的id，发送给客户端。这样客户端就有了自己session的id了。但这个Cookie只在浏览器内存中存在，也就是说，在关闭浏览器窗口后，Cookie就会丢失，也就丢失了sessionId
+# $.extend({},obj1,obj2,...)
+	var obj1={name:"Tom",age:21}
+	1:
+	var result=$.extend({},obj1,{name:"Jerry",sex:"Boy"})
+ 	result=={name:"Jerry",age:21,sex:"Boy"}
+	obj1={name:"Tom",age:21}
+	
+	2:
+	var result=$.extend(obj1,{name:"Jerry",sex:"Boy"})
+ 	result=={name:"Jerry",age:21,sex:"Boy"}
+	obj1=={name:"Jerry",age:21,sex:"Boy"}
