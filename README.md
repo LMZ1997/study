@@ -111,3 +111,14 @@
 	  };
 # echarts在react中使用需要import相关组件 如图例 import "echarts/lib/component/legend"; 如果没有引入，初次进入页面可能显示没问题，但是点击刷新后，图表显示会有问题 
 
+# ts项目防抖代码
+         const debounce = (fn: any, wait: any) => {
+	    //用于输入框onchange防抖
+	    let timeout: any = null;
+	    return function(input: any) {
+	      input.persist();
+	      if (timeout !== null) clearTimeout(timeout);
+	      timeout = setTimeout(fn, wait, input);
+	    };
+	  };
+	  dobounce(fn,300)
